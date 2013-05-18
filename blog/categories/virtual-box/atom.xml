@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: virtual box | Metaphor]]></title>
-  <link href="https://metaphor.github.io/blog/categories/virtual-box/atom.xml" rel="self"/>
-  <link href="https://metaphor.github.io/"/>
-  <updated>2013-05-18T13:49:20+08:00</updated>
-  <id>https://metaphor.github.io/</id>
+  <link href="http://metaphor.github.io/blog/categories/virtual-box/atom.xml" rel="self"/>
+  <link href="http://metaphor.github.io/"/>
+  <updated>2013-05-18T14:11:23+08:00</updated>
+  <id>http://metaphor.github.io/</id>
   <author>
     <name><![CDATA[Zhiheng Li]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[VirtualBox network adapter]]></title>
-    <link href="https://metaphor.github.io/blog/2013/02/06/virtualbox-network-adapter-explained/"/>
+    <link href="http://metaphor.github.io/blog/2013/02/06/virtualbox-network-adapter-explained/"/>
     <updated>2013-02-06T21:27:00+08:00</updated>
-    <id>https://metaphor.github.io/blog/2013/02/06/virtualbox-network-adapter-explained</id>
+    <id>http://metaphor.github.io/blog/2013/02/06/virtualbox-network-adapter-explained</id>
     <content type="html"><![CDATA[<p>A network adatper is the way for your virtual machine instances to connect
 outside world, rather working as a standalone node.</p>
 

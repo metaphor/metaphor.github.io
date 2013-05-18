@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Metaphor]]></title>
-  <link href="https://metaphor.github.io/atom.xml" rel="self"/>
-  <link href="https://metaphor.github.io/"/>
-  <updated>2013-05-18T13:49:20+08:00</updated>
-  <id>https://metaphor.github.io/</id>
+  <link href="http://metaphor.github.io/atom.xml" rel="self"/>
+  <link href="http://metaphor.github.io/"/>
+  <updated>2013-05-18T14:11:23+08:00</updated>
+  <id>http://metaphor.github.io/</id>
   <author>
     <name><![CDATA[Zhiheng Li]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Presenting Code]]></title>
-    <link href="https://metaphor.github.io/blog/2013/05/17/presenting-code/"/>
+    <link href="http://metaphor.github.io/blog/2013/05/17/presenting-code/"/>
     <updated>2013-05-17T16:59:00+08:00</updated>
-    <id>https://metaphor.github.io/blog/2013/05/17/presenting-code</id>
+    <id>http://metaphor.github.io/blog/2013/05/17/presenting-code</id>
     <content type="html"><![CDATA[<h3>Pain Point</h3>
 
 <p>As a software developer going to give presentations, the frequent
@@ -56,23 +56,23 @@ be so obvious, such as IntelliJ. But the support could be done by
 certain plugin.</p>
 
 <p>For this post, I prefer <a href="http://www.sublimetext.com/2">Sublime Text 2</a>, since it is easy to setup and
-it supports a lot of languages syntax highlights. (you could copy the
-code to <a href="http://www.sublimetext.com/2">Sublime Text 2</a> first from other editors) Download &amp; Install <a href="http://www.sublimetext.com/2">Sublime Text 2</a></p>
+it supports a lot of languages syntax highlights(you could copy the
+code to <a href="http://www.sublimetext.com/2">Sublime Text 2</a> first from other editors).</p>
 
 <ul>
-<li>Install Package Manager</li>
+<li><p>Download &amp; Install <a href="http://www.sublimetext.com/2">Sublime Text 2</a></p></li>
+<li><p>Install Package Manager</p></li>
 </ul>
 
 
-<p>To install package, you need the package manager for convienence,
-please following <a href="http://wbond.net/sublime_packages/package_control/installation">http://wbond.net/sublime_packages/package_control/installation</a></p>
+<p>To install package, you need the package manager for convienence, please following <a href="http://wbond.net/sublime_packages/package_control/installation">http://wbond.net/sublime_packages/package_control/installation</a>.</p>
 
 <ul>
 <li>Install <a href="https://github.com/n1k0/SublimeHighlight">SublimeHighlight</a></li>
 </ul>
 
 
-<p><a href="https://github.com/n1k0/SublimeHighlight">SublimeHighlight</a> is the right plugin to enable <strong>copy as RTF</strong>.</p>
+<p>The <a href="https://github.com/n1k0/SublimeHighlight">SublimeHighlight</a> is the right plugin to enable <strong>copy as RTF</strong>.</p>
 
 <p>For how to install package, please following</p>
 
@@ -81,7 +81,7 @@ please following <a href="http://wbond.net/sublime_packages/package_control/inst
 3. choose "SublimeHighlight" in the package list
 </code></pre>
 
-<p>For plugin configuration detail following <a href="https://github.com/n1k0/SublimeHighlight">https://github.com/n1k0/SublimeHighlight</a></p>
+<p>For plugin configuration detail following <a href="https://github.com/n1k0/SublimeHighlight">https://github.com/n1k0/SublimeHighlight</a>.</p>
 
 <ul>
 <li>Copy as RTF</li>
@@ -94,7 +94,7 @@ RTF&rdquo;, paste the code to your Keynote or PowerPoint(you might need
 select <em>keep formatting</em> on PowerPoint).</p>
 
 <p>Below is a sample snapshot,
-<img class="center" src="https://metaphor.github.io/images/present_code.png"></p>
+<img class="center" src="http://metaphor.github.io/images/present_code.png"></p>
 
 <h3>Conclusion</h3>
 
@@ -104,9 +104,9 @@ select <em>keep formatting</em> on PowerPoint).</p>
   
   <entry>
     <title type="html"><![CDATA[VirtualBox network adapter]]></title>
-    <link href="https://metaphor.github.io/blog/2013/02/06/virtualbox-network-adapter-explained/"/>
+    <link href="http://metaphor.github.io/blog/2013/02/06/virtualbox-network-adapter-explained/"/>
     <updated>2013-02-06T21:27:00+08:00</updated>
-    <id>https://metaphor.github.io/blog/2013/02/06/virtualbox-network-adapter-explained</id>
+    <id>http://metaphor.github.io/blog/2013/02/06/virtualbox-network-adapter-explained</id>
     <content type="html"><![CDATA[<p>A network adatper is the way for your virtual machine instances to connect
 outside world, rather working as a standalone node.</p>
 
