@@ -1,0 +1,290 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Presenting Code - Metaphor</title>
+  <meta name="author" content="Zhiheng Li">
+
+  
+  <meta name="description" content="Pain Point As a software developer going to give presentations, the frequent
+requirement is to present code, retaining the syntax highlight. Your &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="https://metaphor.github.io/blog/2013/05/17/presenting-code">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Metaphor" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Metaphor</a></h1>
+  
+    <h2>Metaphor is good</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:metaphor.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Presenting Code</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-05-17T16:59:00+08:00" pubdate data-updated="true">May 17<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><h3>Pain Point</h3>
+
+<p>As a software developer going to give presentations, the frequent
+requirement is to present code, retaining the <em>syntax highlight</em>. Your
+editor has already highlighted your code, but if you copy &amp; paste the
+code directly into to presentation (PowerPoint or Keynote), the code
+might be left default color.</p>
+
+<p>This post is going to show you a way satisfy yourself.</p>
+
+<!-- more -->
+
+
+<h3>Solution</h3>
+
+<p>The <strong>Silver Bullet</strong> underneath is <a href="http://en.wikipedia.org/wiki/Rich_Text_Format">RTF</a>.</p>
+
+<p>Microsoft PowerPoint &amp; Mac OS Keynote both support displaying <a href="http://en.wikipedia.org/wiki/Rich_Text_Format">RTF</a> text.</p>
+
+<p>By default, your <strong>copy is plain text</strong> and has nothing to do with
+format, therefore PowerPoint or Keynote render it as plain text as well.</p>
+
+<p>That means if your editors could <strong>copy your code as RTF</strong>, then <strong>paste</strong>
+the result into presentation, it will display syntax highlighted. The
+question left to us is how to <strong>copy code as RTF</strong> in your code editors.
+This is is just a simple conversion, from your editor syntax highlight
+style to RTF.</p>
+
+<h3>Reference Implementation</h3>
+
+<p><strong><em>Easy Enough!</em></strong></p>
+
+<p>Some guy might find that, Eclipse can easily do this(try it!), that&rsquo;s
+because it builds in the functionality, while other editors might not
+be so obvious, such as IntelliJ. But the support could be done by
+certain plugin.</p>
+
+<p>For this post, I prefer <a href="http://www.sublimetext.com/2">Sublime Text 2</a>, since it is easy to setup and
+it supports a lot of languages syntax highlights. (you could copy the
+code to <a href="http://www.sublimetext.com/2">Sublime Text 2</a> first from other editors) Download &amp; Install <a href="http://www.sublimetext.com/2">Sublime Text 2</a></p>
+
+<ul>
+<li>Install Package Manager</li>
+</ul>
+
+
+<p>To install package, you need the package manager for convienence,
+please following <a href="http://wbond.net/sublime_packages/package_control/installation">http://wbond.net/sublime_packages/package_control/installation</a></p>
+
+<ul>
+<li>Install <a href="https://github.com/n1k0/SublimeHighlight">SublimeHighlight</a></li>
+</ul>
+
+
+<p><a href="https://github.com/n1k0/SublimeHighlight">SublimeHighlight</a> is the right plugin to enable <strong>copy as RTF</strong>.</p>
+
+<p>For how to install package, please following</p>
+
+<pre><code>1. Command + Shift + P to popup the control panel (on Windows it might be Ctrl + Shift + P)
+2. choose "Install Package"
+3. choose "SublimeHighlight" in the package list
+</code></pre>
+
+<p>For plugin configuration detail following <a href="https://github.com/n1k0/SublimeHighlight">https://github.com/n1k0/SublimeHighlight</a></p>
+
+<ul>
+<li>Copy as RTF</li>
+</ul>
+
+
+<p>First you need to set the right syntax highlight to your code, and
+then select the region you are copying, on right context menu &ldquo;Copy as
+RTF&rdquo;, paste the code to your Keynote or PowerPoint(you might need
+select <em>keep formatting</em> on PowerPoint).</p>
+
+<p>Below is a sample snapshot,
+<img class="center" src="/images/present_code.png"></p>
+
+<h3>Conclusion</h3>
+
+<p>That&rsquo;s it! Hope you enjoy your presentations.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Zhiheng Li</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-05-17T16:59:00+08:00" pubdate data-updated="true">May 17<span>th</span>, 2013</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/presenting-code/'>presenting code</a>, <a class='category' href='/blog/categories/sublime-text-2/'>sublime text 2</a>, <a class='category' href='/blog/categories/syntax-highlight/'>syntax highlight</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="https://metaphor.github.io/blog/2013/05/17/presenting-code/" data-via="" data-counturl="https://metaphor.github.io/blog/2013/05/17/presenting-code/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/02/06/virtualbox-network-adapter-explained/" title="Previous Post: VirtualBox network adapter">&laquo; VirtualBox network adapter</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>About Me</h1>
+  <p>I am <em>Zhiheng Li</em></p>
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/05/17/presenting-code/">Presenting Code</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/02/06/virtualbox-network-adapter-explained/">VirtualBox Network Adapter</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Zhiheng Li -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

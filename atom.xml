@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Metaphor]]></title>
+  <link href="https://metaphor.github.io/atom.xml" rel="self"/>
+  <link href="https://metaphor.github.io/"/>
+  <updated>2013-05-18T13:49:20+08:00</updated>
+  <id>https://metaphor.github.io/</id>
+  <author>
+    <name><![CDATA[Zhiheng Li]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Presenting Code]]></title>
+    <link href="https://metaphor.github.io/blog/2013/05/17/presenting-code/"/>
+    <updated>2013-05-17T16:59:00+08:00</updated>
+    <id>https://metaphor.github.io/blog/2013/05/17/presenting-code</id>
+    <content type="html"><![CDATA[<h3>Pain Point</h3>
+
+<p>As a software developer going to give presentations, the frequent
+requirement is to present code, retaining the <em>syntax highlight</em>. Your
+editor has already highlighted your code, but if you copy &amp; paste the
+code directly into to presentation (PowerPoint or Keynote), the code
+might be left default color.</p>
+
+<p>This post is going to show you a way satisfy yourself.</p>
+
+<!-- more -->
+
+
+<h3>Solution</h3>
+
+<p>The <strong>Silver Bullet</strong> underneath is <a href="http://en.wikipedia.org/wiki/Rich_Text_Format">RTF</a>.</p>
+
+<p>Microsoft PowerPoint &amp; Mac OS Keynote both support displaying <a href="http://en.wikipedia.org/wiki/Rich_Text_Format">RTF</a> text.</p>
+
+<p>By default, your <strong>copy is plain text</strong> and has nothing to do with
+format, therefore PowerPoint or Keynote render it as plain text as well.</p>
+
+<p>That means if your editors could <strong>copy your code as RTF</strong>, then <strong>paste</strong>
+the result into presentation, it will display syntax highlighted. The
+question left to us is how to <strong>copy code as RTF</strong> in your code editors.
+This is is just a simple conversion, from your editor syntax highlight
+style to RTF.</p>
+
+<h3>Reference Implementation</h3>
+
+<p><strong><em>Easy Enough!</em></strong></p>
+
+<p>Some guy might find that, Eclipse can easily do this(try it!), that&rsquo;s
+because it builds in the functionality, while other editors might not
+be so obvious, such as IntelliJ. But the support could be done by
+certain plugin.</p>
+
+<p>For this post, I prefer <a href="http://www.sublimetext.com/2">Sublime Text 2</a>, since it is easy to setup and
+it supports a lot of languages syntax highlights. (you could copy the
+code to <a href="http://www.sublimetext.com/2">Sublime Text 2</a> first from other editors) Download &amp; Install <a href="http://www.sublimetext.com/2">Sublime Text 2</a></p>
+
+<ul>
+<li>Install Package Manager</li>
+</ul>
+
+
+<p>To install package, you need the package manager for convienence,
+please following <a href="http://wbond.net/sublime_packages/package_control/installation">http://wbond.net/sublime_packages/package_control/installation</a></p>
+
+<ul>
+<li>Install <a href="https://github.com/n1k0/SublimeHighlight">SublimeHighlight</a></li>
+</ul>
+
+
+<p><a href="https://github.com/n1k0/SublimeHighlight">SublimeHighlight</a> is the right plugin to enable <strong>copy as RTF</strong>.</p>
+
+<p>For how to install package, please following</p>
+
+<pre><code>1. Command + Shift + P to popup the control panel (on Windows it might be Ctrl + Shift + P)
+2. choose "Install Package"
+3. choose "SublimeHighlight" in the package list
+</code></pre>
+
+<p>For plugin configuration detail following <a href="https://github.com/n1k0/SublimeHighlight">https://github.com/n1k0/SublimeHighlight</a></p>
+
+<ul>
+<li>Copy as RTF</li>
+</ul>
+
+
+<p>First you need to set the right syntax highlight to your code, and
+then select the region you are copying, on right context menu &ldquo;Copy as
+RTF&rdquo;, paste the code to your Keynote or PowerPoint(you might need
+select <em>keep formatting</em> on PowerPoint).</p>
+
+<p>Below is a sample snapshot,
+<img class="center" src="https://metaphor.github.io/images/present_code.png"></p>
+
+<h3>Conclusion</h3>
+
+<p>That&rsquo;s it! Hope you enjoy your presentations.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[VirtualBox network adapter]]></title>
+    <link href="https://metaphor.github.io/blog/2013/02/06/virtualbox-network-adapter-explained/"/>
+    <updated>2013-02-06T21:27:00+08:00</updated>
+    <id>https://metaphor.github.io/blog/2013/02/06/virtualbox-network-adapter-explained</id>
+    <content type="html"><![CDATA[<p>A network adatper is the way for your virtual machine instances to connect
+outside world, rather working as a standalone node.</p>
+
+<h3>VirtualBox has 4 types of network adapters</h3>
+
+<p><a href="https://www.virtualbox.org">VirtualBox</a> has basically 4 types of network adapters, provding
+comprehensive means to build your network topology.</p>
+
+<!-- more -->
+
+
+<h4>NAT (Network Address Transform)</h4>
+
+<p>With this adpater, the virtual instance can access the outside world by
+forwarding the request to host, and the host might re-farword the
+response back to the virtual instance. The forwarding rules could be
+configured.</p>
+
+<p>The disadvantage is that the outside world knows only the host, rather the
+viratual instance. This means you cannot access the instance directly.</p>
+
+<h4>Bridged</h4>
+
+<p>Bridged adapter might be the easiest and most user friendly. It makes
+the virtual instance a new physical node like in your network environment, separating
+from the host. It could obtain IP address from DHCP server.</p>
+
+<p>Such ease leads to an inconvience, your instance network configuration
+changes as long as your host network environment changes. That means
+each time you need a different IP to connect to the instance.</p>
+
+<h4>Internal Network</h4>
+
+<p>This adapter usually uses static IP and only allows virtual instance to communicate with other
+instances generated by the same VirtualBox. This result in that even
+the host cannot access the instance. Of course, the instance has no
+Internet access.</p>
+
+<h4>Host Only</h4>
+
+<p>This is my favorite adpater, it combines advantages both of Bridged
+and Internal Network. Virtual instances and host can commnunicate with
+each other without any problem. But the instance cannot connect
+the Internet, because it does not connect to the network environment
+of the host.</p>
+
+<p>To configure Host only adapter, you need to set up a host only
+network first. On Mac OS, goes to <code>Preferences &ndash;> Network &ndash;> Add(Host
+only network)</code></p>
+
+<h3>How to choose right adapters</h3>
+
+<p>Each adapter has its own limitations, so the best solution is to configure
+those adapters in a combined way. VirtualBox allows you to configure multiple adpaters
+within same instances. Also different use cases have their own
+combinations.</p>
+
+<h4>Instances within same host</h4>
+
+<p>Sometimes your instances would be created only in the same host, eg,
+experimental cluster on you laptop. In this case, I would like to combine,</p>
+
+<ul>
+<li>NAT</li>
+<li>Host-only</li>
+</ul>
+
+
+<p>This combination allows the virtual instances to access Internet. The
+host and virtual instances can consistently communicate with each other over static
+IP.</p>
+
+<h4>Instances acrossing hosts</h4>
+
+<p>In real world, there is no such experiment, if you want to leverage
+the VirtualBox for your infrastructure, you probly need to start new
+instances across different hosts. In this case, it requires the
+commnunication between instances across hosts. The host only adapter might not
+fit in this case, so I would like to use,</p>
+
+<ul>
+<li>Bridged</li>
+<li>Switch infrastructure</li>
+</ul>
+
+
+<p>Bridged instance connect to your network infrastructure via switch, working as
+new physical machine. Basically, this allow virtual instances to access the Internet as
+well if your network infrastructure allows.</p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: syntax highlight | Metaphor]]></title>
+  <link href="https://metaphor.github.io/blog/categories/syntax-highlight/atom.xml" rel="self"/>
+  <link href="https://metaphor.github.io/"/>
+  <updated>2013-05-18T13:49:20+08:00</updated>
+  <id>https://metaphor.github.io/</id>
+  <author>
+    <name><![CDATA[Zhiheng Li]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Presenting Code]]></title>
+    <link href="https://metaphor.github.io/blog/2013/05/17/presenting-code/"/>
+    <updated>2013-05-17T16:59:00+08:00</updated>
+    <id>https://metaphor.github.io/blog/2013/05/17/presenting-code</id>
+    <content type="html"><![CDATA[<h3>Pain Point</h3>
+
+<p>As a software developer going to give presentations, the frequent
+requirement is to present code, retaining the <em>syntax highlight</em>. Your
+editor has already highlighted your code, but if you copy &amp; paste the
+code directly into to presentation (PowerPoint or Keynote), the code
+might be left default color.</p>
+
+<p>This post is going to show you a way satisfy yourself.</p>
+
+<!-- more -->
+
+
+<h3>Solution</h3>
+
+<p>The <strong>Silver Bullet</strong> underneath is <a href="http://en.wikipedia.org/wiki/Rich_Text_Format">RTF</a>.</p>
+
+<p>Microsoft PowerPoint &amp; Mac OS Keynote both support displaying <a href="http://en.wikipedia.org/wiki/Rich_Text_Format">RTF</a> text.</p>
+
+<p>By default, your <strong>copy is plain text</strong> and has nothing to do with
+format, therefore PowerPoint or Keynote render it as plain text as well.</p>
+
+<p>That means if your editors could <strong>copy your code as RTF</strong>, then <strong>paste</strong>
+the result into presentation, it will display syntax highlighted. The
+question left to us is how to <strong>copy code as RTF</strong> in your code editors.
+This is is just a simple conversion, from your editor syntax highlight
+style to RTF.</p>
+
+<h3>Reference Implementation</h3>
+
+<p><strong><em>Easy Enough!</em></strong></p>
+
+<p>Some guy might find that, Eclipse can easily do this(try it!), that&rsquo;s
+because it builds in the functionality, while other editors might not
+be so obvious, such as IntelliJ. But the support could be done by
+certain plugin.</p>
+
+<p>For this post, I prefer <a href="http://www.sublimetext.com/2">Sublime Text 2</a>, since it is easy to setup and
+it supports a lot of languages syntax highlights. (you could copy the
+code to <a href="http://www.sublimetext.com/2">Sublime Text 2</a> first from other editors) Download &amp; Install <a href="http://www.sublimetext.com/2">Sublime Text 2</a></p>
+
+<ul>
+<li>Install Package Manager</li>
+</ul>
+
+
+<p>To install package, you need the package manager for convienence,
+please following <a href="http://wbond.net/sublime_packages/package_control/installation">http://wbond.net/sublime_packages/package_control/installation</a></p>
+
+<ul>
+<li>Install <a href="https://github.com/n1k0/SublimeHighlight">SublimeHighlight</a></li>
+</ul>
+
+
+<p><a href="https://github.com/n1k0/SublimeHighlight">SublimeHighlight</a> is the right plugin to enable <strong>copy as RTF</strong>.</p>
+
+<p>For how to install package, please following</p>
+
+<pre><code>1. Command + Shift + P to popup the control panel (on Windows it might be Ctrl + Shift + P)
+2. choose "Install Package"
+3. choose "SublimeHighlight" in the package list
+</code></pre>
+
+<p>For plugin configuration detail following <a href="https://github.com/n1k0/SublimeHighlight">https://github.com/n1k0/SublimeHighlight</a></p>
+
+<ul>
+<li>Copy as RTF</li>
+</ul>
+
+
+<p>First you need to set the right syntax highlight to your code, and
+then select the region you are copying, on right context menu &ldquo;Copy as
+RTF&rdquo;, paste the code to your Keynote or PowerPoint(you might need
+select <em>keep formatting</em> on PowerPoint).</p>
+
+<p>Below is a sample snapshot,
+<img class="center" src="/images/present_code.png"></p>
+
+<h3>Conclusion</h3>
+
+<p>That&rsquo;s it! Hope you enjoy your presentations.</p>
+]]></content>
+  </entry>
+  
+</feed>
