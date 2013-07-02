@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Knowledge Sharing | Metaphor]]></title>
+  <link href="http://metaphor.github.io/blog/categories/knowledge-sharing/atom.xml" rel="self"/>
+  <link href="http://metaphor.github.io/"/>
+  <updated>2013-07-02T11:39:12+08:00</updated>
+  <id>http://metaphor.github.io/</id>
+  <author>
+    <name><![CDATA[Zhiheng Li]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Best Practise - Code Review]]></title>
+    <link href="http://metaphor.github.io/blog/2013/07/02/best-practise-code-review/"/>
+    <updated>2013-07-02T10:05:00+08:00</updated>
+    <id>http://metaphor.github.io/blog/2013/07/02/best-practise-code-review</id>
+    <content type="html"><![CDATA[<p>Yesterday, our team did a <a href="http://en.wikipedia.org/wiki/Code_review">Code Review</a> activity for last several
+commits. Several things are noticable,</p>
+
+<ul>
+<li>Test method name was not meaningful</li>
+<li>The test even didn&rsquo;t test anything, since it still passed when we reverted
+the change</li>
+<li>Shared the problem the pair encountered in development</li>
+<li>Someone forgot what he did</li>
+<li>The guy was challenged</li>
+<li>Some code could be refactored</li>
+<li>Some code didn&rsquo;t follow the convention</li>
+<li>Some code was strange, nobody knew how it worked</li>
+<li>Commit comment didn&rsquo;t reveal the underlying change</li>
+<li>Big commit found</li>
+<li>&hellip;</li>
+</ul>
+
+
+<!-- more -->
+
+
+<p>What above items has told us is, <strong>Code Review</strong> is an
+opportunity to find impovement points. Not only on code quality,
+but also on below fields,</p>
+
+<ul>
+<li><strong>Code Practice</strong></li>
+</ul>
+
+
+<p>Code practice is the basic to guarantee quality. Fowllowing the code
+convention and practice is required. Test testing nothing is totally
+not acceptable. Code Review helped us to identify such issues.
+Then we managed <strong>Continuous Improvement</strong>.</p>
+
+<ul>
+<li><strong>Knowledge Sharing</strong></li>
+</ul>
+
+
+<p>From project perspective, a project should keep going even a senior
+member left. From individual perspective, if you don&rsquo;t want to be
+called during vocation, then there must be a person could take your
+work. The key is <em>Knowledge Sharing</em>. Beside <em>Stand Up Meeting</em>, <em>Pair
+Programming</em>, <em>Code Review</em> also gives the opportunity to share knowledge, as you explain
+what you did to others. Knowledge is spreaded across the team.</p>
+
+<ul>
+<li><strong>Coaching</strong></li>
+</ul>
+
+
+<p>When you explain how you have done the feature, you are also coaching
+<em>juniors</em>. Coaching by <em>real code</em>. Junior often learns tech from
+<em>Quick Start</em>, which does not make much sense in project.</p>
+]]></content>
+  </entry>
+  
+</feed>
