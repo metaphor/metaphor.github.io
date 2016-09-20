@@ -1,4 +1,0 @@
-User-agent: *
-Disallow: 
-
-Sitemap: http://metaphor.github.io/sitemap.xml 
